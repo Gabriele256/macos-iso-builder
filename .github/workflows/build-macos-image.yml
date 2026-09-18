@@ -81,12 +81,7 @@ jobs:
           if [ "$FOUND" = "true" ]; then
             echo "_build=true" >> $GITHUB_OUTPUT
           else
-            sum "## Before you build - check if someone already did it for you :point_down:" \
-                "" \
-                "Browse the **[Recent Forks List](https://github.com/LongQT-sea/macos-iso-builder/releases/latest)** - someone may have already built the macOS version you need." \
-                "" \
-                "If you still need to build your own, star this repo first [LongQT-sea/macos-iso-builder](https://github.com/LongQT-sea/macos-iso-builder) - that's step 1 in the [README](https://github.com/LongQT-sea/macos-iso-builder#how-to-use). :star:" \
-                "<br>![star](https://raw.githubusercontent.com/LongQT-sea/macos-iso-builder/main/.github/star.jpg)"
+            echo "_build=true" >> $GITHUB_OUTPUT
           fi
 
   build-macos-image:
